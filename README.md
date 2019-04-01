@@ -38,6 +38,18 @@ example:
 operator* `=` *that is used to set a variable equal to a value. Mistaking these
 for each other is a common cause of unexpected behavior.
 
+Now, this might feel a bit weird, because you're used to thinking about `=` only
+being around numbers like `Integer` and `Float`. But you can also compare `String`s:
+
+```ruby
+"Razz" == "Matazz" #=> false
+
+"Poodle" == "Poodle" #=> true
+
+"Poodle" == "poodle" #=> false
+```
+
+
 ### Use Inequality Comparison
 
 To check whether two values **are not** equal, we use the *inequality operator*
@@ -49,6 +61,8 @@ it will return `false`. For example:
 1 != 1 #=> false
 
 1 != 7 #=> true
+
+"Poodle" != "Lord of the Manor" #=> true
 ```
 
 ## Quantity Comparisons
