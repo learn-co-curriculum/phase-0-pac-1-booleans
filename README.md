@@ -9,6 +9,7 @@
 * Use Greater-Than-or-Equal-To Comparison `>=`
 * Use Less-Than-or-Equal-To Comparison `<=`
 * Invert Truth Value with "Bang" (`!`)
+* Invert Truth Value with "Double-Bang" (`!`)
 * Join Boolean Expressions with AND
 * Join Boolean Expressions with OR
 
@@ -92,24 +93,70 @@ value on the right, then the evaluation is `true`; `false` otherwise.
 
 ## Invert Truth Value with "Bang" (`!`)
 
-The `!` operator inverts a truth value
+The `!` operator inverts a truth value. Here's the most simple version:
 
 ```ruby
-( 1 + 1 == 2) #=> true
-!( 1 + 1 == 2) #=> false
+!true #=> false
+!false #=> true
+```
+
+We can also invert the truth value of an expression:
+
+```ruby
+( 1 + 1 == 2 ) #=> true
+!( 1 + 1 == 2 ) #=> false
 ```
 
 Since `1 + 1` evaluates to `2`; and since `2 == 2` the return value is `true`.
-We can put the opposite on that result by putting a `!` in front.
 
-Here's a fun riddle:
+## Invert Truth Value with "Double-Bang" (`!!`)
+
+The `!!` operator inverts a truth value. Here's the most simple version:
 
 ```ruby
-!!true
+!!true #=> true
+!!false #=> false
 ```
 
-What's the return value on that? Some people call that "double-bang," but more
-formally it's called the "double-negation" operator.
+We can also invert the truth value of an expression:
+
+```ruby
+!!( 1 + 1 == 2 ) #=> true
+```
+
+Now why would this ever be useful? Great question. It turns out Ruby will treat
+a whole bunch of values as `true` that aren't the literal `true`. We call those
+values "truthy." Similarly, there are values that, even if they aren't the
+literal `false`, Ruby treats as false. We call those values "falsey."
+
+This next statement is very important:
+
+> **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as falsey
+
+So:
+
+```ruby
+false ? true : false  #=> false
+nil   ? true : false  #=> false
+6.7   ? true : false  #=> true
+1 + 1 ? true : false  #=> true
+:i_once_saw_a_poodle_play_racquetball ? true  : false  #=> true
+```
+
+In each of the examples above, we wanted to return whether the `truthy` or
+`falsey` value was a real-deal `true` or `false`. What a lot of code to type.
+But here's where our friend the double-bang operator comes in.
+
+```ruby
+!!false #=> false
+!!nil   #=> false
+!!6.7   #=> true
+!!1 + 1 #=> true
+!!:i_once_saw_a_poodle_play_racquetball #=> true
+```
+
+Programmers often use double-bang to show other programmers "Hey, I'm being
+clever here and am using a truthy (or falsey) value.
 
 > **What's with Bang?** Programmers, being lazy people, thought that
 > "exclamation point" was too long to say, so it became "bang." From this, many
@@ -143,7 +190,7 @@ In Ruby we would express this "double-conditional" like so.
 
 ```ruby
 # Ternary
-# Position 1                         # Position 2               # Position 3 
+# Position 1                         # Position 2               # Position 3
 day_is_thursday && mom_is_not_home ? "play scary video games" : "do homework"
 ```
 
