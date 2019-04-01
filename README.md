@@ -10,6 +10,7 @@
 * Use Less-Than-or-Equal-To Comparison `<=`
 * Invert Truth Value with "Bang" (`!`)
 * Invert Truth Value with "Double-Bang" (`!`)
+* Identify Truthy and Falsey Values in Ruby
 * Join Boolean Expressions with AND
 * Join Boolean Expressions with OR
 
@@ -167,6 +168,12 @@ clever here and am using a truthy (or falsey) value.
 > era is a tag after, well, "hash." "Splat" or "star" are common for `*` and
 > we've heard `$` called "bling." "Caret" (`^`) and "percent" (`%`) don't seem
 > to have clever names.
+
+## Identify Truthy and Falsey Values in Ruby
+
+This concept is ***so*** important we're going to repeat it again here:
+
+> **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as falsey
 
 ## Join Boolean Expressions with AND
 
