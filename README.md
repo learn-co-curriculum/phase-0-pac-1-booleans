@@ -205,9 +205,9 @@ false || true #=> true
 ```
 
 Of course, keep in mind, these Boolean values can, themselves, be Boolean
-expressions!
-
-Instead of `false && true` it could be `(expression - (expression)) && expression`.
+expressions!  Instead of `false && true` it could another expression that
+results in `true` or `false` like `(poodle_count > 12) && (owner == "Lorlei
+Gilmore")`
 
 ## Longer Expressions
 
@@ -224,7 +224,7 @@ it_is_wet && !it_is_cold ? "umbrella" : "light fabric"
 ```
 
 Try changing some of the values or expressions to make sure you understand how
-_express_ your ideas using variables and Boolean conjunctions!
+to _express_ your ideas using variables and Boolean conjunctions!
 
 ## Conclusion
 
