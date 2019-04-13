@@ -18,7 +18,7 @@
 
 As we saw in the ternary expression, sometimes we need to get a Boolean value
 (`true` or `false`) _from_ an expression in order to use it _in_ another
-expression.  We showed that we can use  greater than (`>`) and less than (`<`)
+expression.  We showed that we can use greater than (`>`) and less than (`<`)
 to perform comparisons that produce `true` or `false`. Let's learn more!
 
 ## Arithmetic Comparisons
@@ -196,6 +196,8 @@ night on the living room TV.
 In Ruby we would express this "double-conditional" like so.
 
 ```ruby
+day_is_thursday = true
+mom_is_not_home = true
 # Ternary
 # Position 1                         # Position 2               # Position 3
 day_is_thursday && mom_is_not_home ? "play scary video games" : "do homework"
@@ -235,8 +237,8 @@ to _express_ your ideas using variables and Boolean conjunctions!
 
 ## Conclusion
 
-While it might seem strange that these simple little conditional expressions are so tiny,
-stacked together, they can have a big impact!
+While it might seem strange that these simple little conditional expressions are
+so tiny, stacked together, they can have a big impact!
 
 Most social media sites have a bit of conditional logic **just like this one**.
 
