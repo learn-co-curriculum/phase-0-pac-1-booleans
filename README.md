@@ -10,7 +10,7 @@
 * Use Less-Than-or-Equal-To Comparison `<=`
 * Invert Truth Value with "Bang" (`!`)
 * Invert Truth Value with "Double-Bang" (`!`)
-* Identify Truthy and Falsey Values in Ruby
+* Identify Truthy and Falsy Values in Ruby
 * Join Boolean Expressions with AND
 * Join Boolean Expressions with OR
 
@@ -128,11 +128,11 @@ We can also invert the truth value of an expression:
 Now why would this ever be useful? Great question. It turns out Ruby will treat
 a whole bunch of values as `true` that aren't the literal `true`. We call those
 values "truthy." Similarly, there are values that, even if they aren't the
-literal `false`, Ruby treats as false. We call those values "falsey."
+literal `false`, Ruby treats as false. We call those values "falsy."
 
 This next statement is very important:
 
-> **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as falsey
+> **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as false
 
 So:
 
@@ -145,7 +145,7 @@ nil   ? true : false  #=> false
 ```
 
 In each of the examples above, we wanted to return whether the `truthy` or
-`falsey` value was a real-deal `true` or `false`. What a lot of code to type.
+`false` value was a real-deal `true` or `false`. What a lot of code to type.
 But here's where our friend the double-bang operator comes in.
 
 ```ruby
@@ -157,7 +157,7 @@ But here's where our friend the double-bang operator comes in.
 ```
 
 Programmers often use double-bang to show other programmers "Hey, I'm being
-clever here and am using a truthy (or falsey) value.
+clever here and am using a truthy (or false) value.
 
 > **What's with Bang?** Programmers, being lazy people, thought that
 > "exclamation point" was too long to say, so it became "bang." From this, many
@@ -169,11 +169,11 @@ clever here and am using a truthy (or falsey) value.
 > we've heard `$` called "bling." "Caret" (`^`) and "percent" (`%`) don't seem
 > to have clever names.
 
-## Identify Truthy and Falsey Values in Ruby
+## Identify Truthy and Falsy Values in Ruby
 
 This concept is ***so*** important we're going to repeat it again here:
 
-> **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as falsey
+> **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as falsy
 
 ## Join Boolean Expressions with AND
 
