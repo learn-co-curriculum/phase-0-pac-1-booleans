@@ -249,3 +249,4 @@ top_corner_image = (user_logged_in && profile_pic_uploaded) ? retrieve_profile_p
 With this collection of comparison operators you're able to express a
 surprisingly complex series of desires to Ruby! Your programming conversational
 level is nearing the pre-teen stage!
+
