@@ -10,7 +10,7 @@
 * Use Less-Than-or-Equal-To Comparison `<=`
 * Invert Truth Value with "Bang" (`!`)
 * Invert Truth Value with "Double-Bang" (`!`)
-* Identify Truthy and Falsy Values in Ruby
+* Identify Truthy and Falsey Values in Ruby
 * Join Boolean Expressions with AND
 * Join Boolean Expressions with OR
 
@@ -128,7 +128,7 @@ We can also invert the truth value of an expression:
 Now why would this ever be useful? Great question. It turns out Ruby will treat
 a whole bunch of values as `true` that aren't the literal `true`. We call those
 values "truthy." Similarly, there are values that, even if they aren't the
-literal `false`, Ruby treats as false. We call those values "falsy."
+literal `false`, Ruby treats as false. We call those values "falsey."
 
 This next statement is very important:
 
@@ -145,7 +145,7 @@ nil   ? true : false  #=> false
 ```
 
 In each of the examples above, we wanted to return whether the `truthy` or
-`false` value was a real-deal `true` or `false`. What a lot of code to type.
+`falsey` value was a real-deal `true` or `false`. What a lot of code to type.
 But here's where our friend the double-bang operator comes in.
 
 ```ruby
@@ -169,11 +169,11 @@ clever here and am using a truthy (or false) value.
 > we've heard `$` called "bling." "Caret" (`^`) and "percent" (`%`) don't seem
 > to have clever names.
 
-## Identify Truthy and Falsy Values in Ruby
+## Identify Truthy and Falsey Values in Ruby
 
 This concept is ***so*** important we're going to repeat it again here:
 
-> **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as falsy
+> **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as falsey
 
 ## Join Boolean Expressions with AND
 
