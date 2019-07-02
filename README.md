@@ -173,7 +173,13 @@ clever here and am using a truthy (or false) value.
 
 This concept is ***so*** important we're going to repeat it again here:
 
-> **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as falsey
+> **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as falsey.
+
+> **Aside**: The word `nil` represents a _lack of object or value_ in Ruby. Use
+cases may not seem obvious yet, but when we expand beyond expressions, we will
+see many example where code _does_ something but doesn't actually return a value.
+In these situations, `nil` is usually returned instead to indicate the _lack of
+value_.
 
 ## Join Boolean Expressions with AND
 
