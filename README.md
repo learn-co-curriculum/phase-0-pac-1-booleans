@@ -9,7 +9,7 @@
 * Use Greater-Than-or-Equal-To Comparison `>=`
 * Use Less-Than-or-Equal-To Comparison `<=`
 * Invert Truth Value with "Bang" (`!`)
-* Invert Truth Value with "Double-Bang" (`!`)
+* Invert Truth Value with "Double-Bang" (`!!`)
 * Identify Truthy and Falsey Values in Ruby
 * Join Boolean Expressions with AND
 * Join Boolean Expressions with OR
