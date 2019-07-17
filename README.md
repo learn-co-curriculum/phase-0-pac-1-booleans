@@ -36,8 +36,8 @@ example:
 1 == 7 #=> false
 ```
 
-**IMPORTANT**: The comparison operator* `==` *is distinct from the assignment
-operator* `=` *that is used to set a variable equal to a value. Mistaking these
+**IMPORTANT**: The comparison operator `==` _is distinct from the assignment
+operator_ `=` which is used to set a variable equal to a value. Mistaking these
 for each other is a common cause of unexpected behavior.
 
 Now, this might feel a bit weird, because you're used to thinking about `=` only
