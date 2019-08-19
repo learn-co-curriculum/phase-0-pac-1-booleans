@@ -16,12 +16,12 @@
 
 ## Introduction
 
-As we saw in the ternary expression, sometimes we need to get a Boolean value
-(`true` or `false`) _from another_ expression in order to use it _in_ another
-expression.  In the previous lesson, we showed that we can use the greater-than
-operator (`>`) and less-than operator (`<`) to perform comparisons that produce
-or _calculated_ `true` or `false`. Let's get more operators so that we can gain
-more expressions that return `true` or `false`.
+As we saw in the ternary expression, sometimes we need to _get_ a Boolean value
+(`true` or `false`) _from another_ expression to use it _in another
+expression_.  In the previous lesson, we showed that we can use the
+greater-than operator (`>`) and less-than operator (`<`) to perform comparisons
+that produce or _calculated_ `true` or `false`. Let's learn some more operators
+so we can have more tests that return `true` or `false`.
 
 ## Arithmetic Comparisons
 
@@ -34,38 +34,30 @@ example:
 
 ```ruby
 1 == 1 #=> true
-
 1 == 7 #=> false
 ```
 
-**IMPORTANT**: We said this before, but it bears repeating, the comparison
-operator `==` _is not the same as the assignment operator_ `=`, which is used
-to assign values to variables. Mistaking these for each other is a common cause
-of unexpected behavior (that is, a bug).
+**IMPORTANT**: The comparison operator `==` _is not the same as the assignment
+operator_ `=`, which is used to assign values to variables.
 
-Now, this might feel a bit weird, because you're used to thinking about `=` or
-`==` only being around numbers like `Integer` and `Float`. But you can also
-compare `String`s:
+_In Ruby, we also compare `String`s (case sensitive!_):
 
 ```ruby
 "Razz" == "Matazz" #=> false
-
 "Poodle" == "Poodle" #=> true
-
 "Poodle" == "poodle" #=> false
 ```
+
 ### Use Inequality Comparison
 
 To check whether two values **are not** equal, we use the *inequality operator*
-represented with `!=` (which programmers pronounce as "bang-equal-sign;" more
-on "bang" below). If two values are not equal, then the statement will return
-`true`. If they are equal, then it will return `false`. For example:
+represented with `!=` (which programmers pronounce as "bang-equals"). If two
+values are _not_ equal, then the statement will return `true`. If they are
+equal, then it will return `false`. For example:
 
 ```ruby
 1 != 1 #=> false
-
 1 != 7 #=> true
-
 "Poodle" != "Lord of the Manor" #=> true
 ```
 
@@ -127,7 +119,7 @@ We can also invert the truth value of an expression:
 !!( 1 + 1 == 2 ) #=> true
 ```
 
-Now why would this ever be useful? Great question. To address this we need to
+Now, why would this ever be useful? Great question. To address this we need to
 take a slight tangent to discuss what counts as `true` and `false` in Ruby.
 
 ## Truthiness in Ruby 
@@ -152,13 +144,13 @@ nil   ? true : false  #=> false
 :i_once_saw_a_poodle_play_racquetball ? true  : false  #=> true
 ```
 
-Let's return to "double-bang."
+Looking at these examples, you'll see they all follow a common format. Most of
+the time, if we see a repeated format in programming there's usually a shorter
+way.  There is, and the secret is the "double-bang."
 
 ## Invert Truth Value with "Double-Bang" (`!!`) Part 2
 
-In each of the examples above, we wanted to return whether the `truthy` or
-`falsey` value was a real-deal `true` or `false`. What a lot of code to type.
-But here's where our friend the double-bang operator comes in.
+Look how double-bang shortens our code:
 
 ```ruby
 !!false #=> false
@@ -169,21 +161,15 @@ But here's where our friend the double-bang operator comes in.
 ```
 
 Programmers often use double-bang to show other programmers "Hey, I'm being
-clever here and am using a truthy value.
+clever here and am using a truthy value but I _really_ intend to derive a
+`true` / `false` value from it."
 
 > **What's with "Bang?"** Programmers, being lazy people, thought that
-> "exclamation point" was too long to say, so it became "bang." From this, many
-> of the punctuation marks, since they're often used in code or systems
-> administration, got cute nicknames. The `@` became "at" mostly to distinguish
-> it from "ampersand" (`&`) which is often called "and." The octothorpe (`#`)
-> became called "hash" or "pound" and thus the "hash-tag" of the social media
-> era is a tag after, well, a "hash." "Splat" or "star" are common for `*` and
-> we've heard `$` called "bling." "Caret" (`^`) and "percent" (`%`) don't seem
-> to have clever names.
+> "exclamation point" was too long to say, so it became "bang."
 
 ## Identify Truthy and Falsey Values in Ruby
 
-This concept is ***so*** important we're going to repeat it again here:
+This concept is ***so*** important we're going to repeat it:
 
 > **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as falsey
 > all other things, even things you've not heard of yet are treated as truthy
@@ -205,7 +191,7 @@ It's common to say things like:
 "IF it's Thursday AND my Mom is not home THEN I will play scary video games all
 night on the living-room TV."
 
-In Ruby we would express this "double-conditional" like so.
+In Ruby, we would express this "double-conditional" like so.
 
 ```ruby
 day_is_thursday = true
@@ -233,7 +219,7 @@ expression that results in `true` or `false` like `(poodle_count > 12) &&
 ## Longer Expressions
 
 Because of the ability to use parentheses `()`, "and" (`&&`), "or" (`||`), and
-the ternary expression, we can create surprisingly rich programs:
+the ternary expression, we can create surprisingly rich tiny programs.
 
 ```ruby
 chance_of_precipitation = 1000
@@ -244,29 +230,13 @@ it_is_wet && it_is_cold ? "snow-suit" : "something less bulky" #=> "snow-suit"
 it_is_wet && !it_is_cold ? "umbrella" : "light fabric"
 ```
 
-Try typing this program into IRB and then change some of the values or
-expressions to make sure you understand how to _express_ your ideas using
-variables and Boolean conjunctions! Use your imagination to imagine simple bits
-of conditional reasoning and try to get IRB to print out the right result. You
-should feel like the conversations you're having with IRB are growing steadily
-richer.
-
 ## Conclusion
 
-While it might seem strange that these simple little conditional expressions
-are so tiny, stacked together, they can have a big impact!
-
-Most social media sites have a bit of conditional logic **just like this one**.
-
-```ruby
-top_corner_image = (user_logged_in && profile_pic_uploaded) ? retrieve_profile_pic : default_avatar
-```
-
-You should be able to reason about how you might ensure the `top_corner_image`
-is your lovely face versus a default image.
-
-## Conclusion
+Learning how to join logical Boolean expressions allows us to make expressions
+that are surprisingly rich!
 
 With this collection of comparison operators, you're able to express a
-surprisingly complex series of desires to Ruby! Your programming conversational
-level is nearing the pre-teen stage!
+surprisingly complex series of desires to Ruby!
+
+From a "programming as conversation" perspective, you're now communicating at the
+sophistication level of most early teens!
