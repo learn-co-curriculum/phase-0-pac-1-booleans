@@ -182,7 +182,6 @@ evaluate to `true`, both values of either side of the symbol must evaluate to
 
 ```ruby
 true && true #=> true
-
 true && false #=> false
 ```
 
