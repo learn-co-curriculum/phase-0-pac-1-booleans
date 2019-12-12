@@ -104,16 +104,17 @@ We can also invert the truth value of an expression:
 
 Since `1 + 1` evaluates to `2`; and since `2 == 2` the return value is `true`.
 
-## Invert Truth Value with "Double-Bang" (`!!`) Part 1
+## Invert Truth Value _Twice_ with "Double-Bang" (`!!`) Part 1
 
-The `!!` operator inverts a truth value. Here's the most simple version:
+The `!!` operator inverts a truth value, _then inverts it once more_. Here's the
+most simple version:
 
 ```ruby
 !!true #=> true
 !!false #=> false
 ```
 
-We can also invert the truth value of an expression:
+We can also apply this to an expression:
 
 ```ruby
 !!( 1 + 1 == 2 ) #=> true
@@ -139,18 +140,22 @@ So:
 ```ruby
 false ? true : false  #=> false
 nil   ? true : false  #=> false
+
 6.7   ? true : false  #=> true
 1 + 1 ? true : false  #=> true
+0 ? true : false #=> true (!)
 :i_once_saw_a_poodle_play_racquetball ? true  : false  #=> true
 ```
 
-Looking at these examples, you'll see they all follow a common format. Most of
-the time, if we see a repeated format in programming there's usually a shorter
-way.  There is, and the secret is the "double-bang."
+The ternary expressions here show us that numbers (even zero) evaluate
+to `true`.
 
 ## Invert Truth Value with "Double-Bang" (`!!`) Part 2
 
-Look how double-bang shortens our code:
+It is common to use the _truthiness_ of a value to do something conditionally
+in code. In these cases, programmers will sometimes use the double-bang to
+explicitly return a `true` or `false` value. 
+
 
 ```ruby
 !!false #=> false
@@ -160,12 +165,12 @@ Look how double-bang shortens our code:
 !!:i_once_saw_a_poodle_play_racquetball #=> true
 ```
 
-Programmers often use double-bang to show other programmers "Hey, I'm being
+This is a way for programmers to say to other programmers "Hey, I'm being
 clever here and am using a truthy value but I _really_ intend to derive a
 `true` / `false` value from it."
 
 > **What's with "Bang?"** Programmers, being lazy people, thought that
-> "exclamation point" was too long to say, so it became "bang."
+> "exclamation point" was too long to say, so it became "bang".
 
 ## Identify Truthy and Falsey Values in Ruby
 
