@@ -20,7 +20,7 @@ As we saw in the ternary expression, sometimes we need to _get_ a Boolean value
 (`true` or `false`) _from another_ expression to use it _in another
 expression_.  In the previous lesson, we showed that we can use the
 greater-than operator (`>`) and less-than operator (`<`) to perform comparisons
-that produce or _calculated_ `true` or `false`. Let's learn some more operators
+that produce or _calculate_ `true` or `false`. Let's learn some more operators
 so we can have more tests that return `true` or `false`.
 
 ## Arithmetic Comparisons
@@ -161,7 +161,7 @@ explicitly return a `true` or `false` value.
 !!false #=> false
 !!nil   #=> false
 !!6.7   #=> true
-!!1 + 1 #=> true
+!!(1 + 1) #=> true
 !!:i_once_saw_a_poodle_play_racquetball #=> true
 ```
 
@@ -176,13 +176,13 @@ clever here and am using a truthy value but I _really_ intend to derive a
 
 This concept is ***so*** important we're going to repeat it:
 
-> **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as falsey
-> all other things, even things you've not heard of yet are treated as truthy
+> **IMPORTANT**: Ruby will treat anything that is `false` or `nil` as falsey;
+> all other things, even things you've not heard of yet, are treated as truthy
 
 ## Join Boolean Expressions with AND
 
 In Ruby `&&` ("double-ampersand") represents "AND." For an `&&` ("and") to
-evaluate to `true`, both values of either side of the symbol must evaluate to
+evaluate to `true`, both values on either side of the symbol must evaluate to
 `true`. For example:
 
 ```ruby
