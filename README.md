@@ -20,16 +20,16 @@ We have learned that _expressions_ are code statements that return a value: the 
 
 ## Describe the Difference Between Truthy and Falsey Values
 
-All values in Javascript, of any data type (strings, numbers, etc.), are treated as either _truthy_ or _falsey_. In JavaScript, the following values are **falsey**:
+All values in Javascript, of any data type (`String`, `Number`, etc.), are treated as either _truthy_ or _falsey_. The following values are **falsey**:
 
 * `false`
 * `null`
 * `undefined`
 * `0`
 * `NaN`
-* An empty string (` \`\` `, `''`, `""`)
+* An empty string (`` `` ``, `''`, `""`)
 
-**_Every other value is truthy_**.
+***Every other value is truthy***.
 
 To check whether a value is truthy or falsey, we can pass it to the global
 `Boolean` object, which converts the value into its boolean equivalent. You may
@@ -68,4 +68,4 @@ Don't worry if this seems a little theoretical at this point. We will learn how 
 
 ## Conclusion
 
-In this lesson, we've learned what a _Boolean expression_ is. We've also learned which values in JavaScript are considered _truthy_ and which are considered _falsey_. With these understandings, we are now ready to learn how to construct Boolean expressions that can be used to execute code conditionally.
+In this lesson, we've learned what a _Boolean expression_ is. We've also learned which values in JavaScript are considered _truthy_ and which are considered _falsey_. With these understandings, we are now ready to learn how to construct Boolean expressions that return `true` or `false`.
