@@ -27,7 +27,7 @@ All values in Javascript, of any data type (`String`, `Number`, etc.), are treat
 * `undefined`
 * `0`
 * `NaN`
-* An empty string (`` `` ``, `''`, `""`)
+* An empty string (`""`, `''`)
 
 ***Every other value is truthy***.
 
