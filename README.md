@@ -86,3 +86,8 @@ In this lesson, we've learned what a _Boolean expression_ is. We've also learned
 which values in JavaScript are considered _truthy_ and which are considered
 _falsey_. With these understandings, we are now ready to learn how to construct
 Boolean expressions that return `true` or `false`.
+
+## Resources
+
+* MDN
+  * [Truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) and [falsey](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
