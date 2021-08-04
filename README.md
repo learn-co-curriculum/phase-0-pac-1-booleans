@@ -2,22 +2,23 @@
 
 ## Learning Goals
 
-* Explain What a Boolean Expression Is
-* Describe Truthy and Falsey Values in JavaScript
+- Explain What a Boolean Expression Is
+- Describe Truthy and Falsey Values in JavaScript
 
 ## Introduction
 
 Quite commonly in our computer programs, we want to execute code
 _conditionally_, i.e., if some condition is true (or false). For example:
 
-* _If_ the user has entered the correct login credentials, _then_ log them into our web app
-* _If_ there isn't enough money in the user's account to execute the transfer,
+- _If_ the user has entered the correct login credentials, _then_ log them into
+  our web app
+- _If_ there isn't enough money in the user's account to execute the transfer,
   _then_ send them an error message
 
 In the following lessons, we will learn about operators we can use to construct
 those conditional statements. Before we get to that, however, we need to
-understand _boolean expressions_ and the concepts of _truthyness_ and
-_falseyness_.
+understand _boolean expressions_ and the concepts of _truthy-ness_ and
+_falsey-ness_.
 
 ## Explain What a Boolean Expressions Is
 
@@ -34,18 +35,19 @@ that returns either `true` or `false`.
 All values in Javascript, of any data type (`String`, `Number`, etc.), are
 treated as either _truthy_ or _falsey_. The following values are **falsey**:
 
-* `false`
-* `null`
-* `undefined`
-* `0`
-* `NaN`
-* An empty string (`""`, `''`)
+- `false`
+- `null`
+- `undefined`
+- `0`
+- `NaN`
+- An empty string (`""`, `''`)
 
-***Every other value is truthy***.
+**_Every other value is truthy_**.
 
 To check whether a value is truthy or falsey, we can pass it to the global
 `Boolean` object, which converts the value into its boolean equivalent. You may
-want to try these out yourself in [repl.it](https://repl.it/languages/javascript).
+want to try these out yourself in
+[repl.it](https://repl.it/languages/javascript).
 
 ```js
 Boolean(false);
@@ -63,7 +65,7 @@ Boolean(0);
 Boolean(NaN);
 // => false
 
-Boolean('');
+Boolean("");
 // => false
 
 Boolean(true);
@@ -72,7 +74,7 @@ Boolean(true);
 Boolean(42);
 // => true
 
-Boolean('Hello, world!');
+Boolean("Hello, world!");
 // => true
 ```
 
@@ -89,5 +91,5 @@ Boolean expressions that return `true` or `false`.
 
 ## Resources
 
-* MDN
-  * [Truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) and [falsey](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+- MDN
+  - [Truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) and [falsey](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
