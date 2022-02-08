@@ -47,7 +47,7 @@ treated as either _truthy_ or _falsey_. The following values are **falsey**:
 To check whether a value is truthy or falsey, we can pass it to the global
 `Boolean` object, which converts the value into its boolean equivalent. You may
 want to try these out yourself in
-[repl.it](https://repl.it/languages/javascript).
+[replit](https://replit.com/languages/javascript).
 
 ```js
 Boolean(false);
