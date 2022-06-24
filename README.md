@@ -20,7 +20,7 @@ those conditional statements. Before we get to that, however, we need to
 understand _boolean expressions_ and the concepts of _truthy-ness_ and
 _falsey-ness_.
 
-## Explain What a Boolean Expressions Is
+## Explain What a Boolean Expression Is
 
 We have learned that _expressions_ are code statements that return a value: the
 _constant expression_ returns the value of the constant, the _assignment
