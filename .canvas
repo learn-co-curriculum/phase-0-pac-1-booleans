@@ -1,6 +1,6 @@
 ---
 :lessons:
-- :id: 233773
-  :course_id: 6602
-  :canvas_url: https://learning.flatironschool.com/courses/6602/pages/boolean-expressions
-  :type: page
+  - :id: 240923
+    :course_id: 6602
+    :canvas_url: https://learning.flatironschool.com/courses/6602/pages/boolean-expressions
+    :type: page
